@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "run:dev": "nodemon src/index.js",
-    "dev": "tsx watch src/controllers/findGameController.ts",
+    "dev": "tsx watch src/index.ts",
     "start": "node dist/server.js",
     "build": "tsup src --out-dir /dist",
     "lint": "npx @biomejs/biome check --write src"
