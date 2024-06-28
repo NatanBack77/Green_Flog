@@ -1,3 +1,4 @@
+import cors from "cors";
 import express, { type Request, type Response } from "express";
 import { z } from "zod";
 import { findGamesService } from "./Services/FindGameService";
@@ -7,6 +8,7 @@ import { middlewareError } from "./middlewares/errors";
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.post("/", middlewareError, async (req: Request, res: Response) => {
 	const GameSchema = z.object({
