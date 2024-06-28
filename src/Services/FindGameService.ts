@@ -1,9 +1,7 @@
 import fs from "node:fs";
+import { NotFound } from "../helpers/Api-errors";
 
-type Game = {
-	game: string;
-};
-export async function findGamesService({ game }: Game) {
+export async function findGamesService(game: string) {
 	const inicio = performance.now();
 
 	const data = await fs.readFileSync("./steamGames.json", "utf-8");
@@ -13,5 +11,6 @@ export async function findGamesService({ game }: Game) {
 
 	const fim = performance.now();
 	console.log(`A operação levou ${fim - inicio} milissegundos`);
+
 	return item;
 }

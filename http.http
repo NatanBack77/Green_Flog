@@ -1,0 +1,23 @@
+POST http://localhost:30001/
+Content-Type: application/json
+
+{
+    "game":"The Apple"
+}
+###
+POST http://localhost:30001/
+Content-Type: application/json
+
+{
+    "game":"Day of Defet"
+}
+
+###
+POST http://localhost:30001/
+Content-Type: application/json
+
+{
+    "game":"Deathmatch Classic"
+}
+
+
